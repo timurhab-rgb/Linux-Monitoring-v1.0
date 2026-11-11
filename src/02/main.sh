@@ -1,9 +1,8 @@
 #!/bin/bash
+script_dir=$(dirname "$0")
 
-echo "${BASH_SOURCE[0]}"
-
-source ./print_info.sh
-source ./system_info.sh
+source "$script_dir/print_info.sh"
+source "$script_dir/system_info.sh"
 
 print_info
 

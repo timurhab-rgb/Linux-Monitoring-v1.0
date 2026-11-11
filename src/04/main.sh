@@ -1,10 +1,9 @@
 #!/bin/bash
+script_dir=$(dirname "$0")
 
-
-source ./config.sh
-source ./color_names.sh
-
-source ./color_scheme.sh
+source "$script_dir/config.sh"
+source "$script_dir/color_names.sh"
+source "$script_dir/color_scheme.sh"
 
 if [[ "$column1_background" =~ ^[1-6]$ &&
       "$column1_font_color" =~ ^[1-6]$ &&
@@ -22,9 +21,9 @@ if [[ "$column1_background" == "$column1_font_color" ||
 	exit 1
 fi
 
-source ./colors.sh
-source ./system_info.sh
-source ./print_info.sh
+source "$script_dir/colors.sh"
+source "$script_dir/system_info.sh"
+source "$script_dir/print_info.sh"
 print_info
 echo
 print_color_scheme

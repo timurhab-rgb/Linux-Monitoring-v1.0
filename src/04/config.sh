@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./config.conf
+source "$script_dir/config.conf"
 
 if [[ -z "$column1_background" ]]; then
     column1_background=6
